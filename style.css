@@ -13,3 +13,9 @@
     align-items: center;
     justify-content: center;
 }
+
+.gridCellClick {
+
+    background-color: palegreen;
+
+}

@@ -15,7 +15,16 @@ btnGridGen.addEventListener('click', function(){
         gridCell.innerHTML = i;
         // Aggiungo la cella al grid container
         gridContainer.append(gridCell);
-    
+
+        //Aggiungo azione al click
+        gridCell.addEventListener('click', function() {
+
+            gridCell.classList.add('gridCellClick');
+
+            console.log('Hai cliccato sulla cella n.' + gridCell.innerHTML);
+
+        })
+
     }
 
 })
