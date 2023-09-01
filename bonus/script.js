@@ -4,14 +4,6 @@
 let gridContainer = document.getElementById('gridCont');
 // Variabile agganciata al button
 let btnGridGen = document.getElementById('btnGridGen');
-// Scelgo 10 numeri random e stabilisco le celle che avranno pepe the frog
-let randomNums = Array.from({length: 10}, () => Math.floor(Math.random() * 100));
-let randomCellNums = [];
-for (let i= 0; i < randomNums.length; i++) {
-    randomCellNums[i] = ('cellNum' + randomNums[i]);
-}
-console.log(randomNums);
-console.log(randomCellNums);
 
 // Event listener del button
 btnGridGen.addEventListener('click', function(){
@@ -20,7 +12,16 @@ btnGridGen.addEventListener('click', function(){
     while (gridContainer.hasChildNodes()) {
         gridContainer.removeChild(gridContainer.firstChild);
     }
-
+    
+    // Scelgo 10 numeri random e stabilisco le celle che avranno pepe the frog
+    let randomNums = Array.from({length: 10}, () => Math.floor(Math.random() * 100));
+    let randomCellNums = [];
+    for (let i= 0; i < randomNums.length; i++) {
+        randomCellNums[i] = ('cellNum' + randomNums[i]);
+    }
+    console.log(randomNums);
+    console.log(randomCellNums);
+    
     // Aggiungo celle a 'gridCont'
     for (let i = 1; i <= 100; i++) {
 
