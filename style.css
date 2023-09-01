@@ -5,17 +5,20 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: lightblue;
+}
+
 .gridCell {
     width: calc(100% /10);
     aspect-ratio: 1 / 1;
-    border: 1px solid black;
+    border: 1px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .gridCellClick {
-
-    background-color: palegreen;
-
+    background-color: rgb(50, 90, 230);
+    color: white;
 }
