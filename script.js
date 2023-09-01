@@ -5,7 +5,7 @@ let gridContainer = document.getElementById('gridCont');
 // Variabile agganciata al button
 let btnGridGen = document.getElementById('btnGridGen');
 
-// event listener del button
+// Event listener del button
 btnGridGen.addEventListener('click', function(){
     
     // Cancello tutti i figli di 'gridCont'
@@ -20,7 +20,7 @@ btnGridGen.addEventListener('click', function(){
         let gridCell = document.createElement('div');
         gridCell.classList.add('gridCell');
         gridCell.innerHTML = i;
-        // Aggiungo la cella al grid container
+        // Aggiungo la cella a 'gridCont'
         gridContainer.append(gridCell);
 
         //Aggiungo azione al click sulla cella
