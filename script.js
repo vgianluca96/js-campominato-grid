@@ -8,7 +8,7 @@ let btnGridGen = document.getElementById('btnGridGen');
 // Event listener del button
 btnGridGen.addEventListener('click', function(){
     
-    // Cancello tutti i figli di 'gridCont'
+    // Cancello tutti i figli di 'gridCont', così al click si azzera la griglia
     while (gridContainer.hasChildNodes()) {
         gridContainer.removeChild(gridContainer.firstChild);
     }
