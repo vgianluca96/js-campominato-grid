@@ -4,7 +4,7 @@
 let gridContainer = document.getElementById('gridCont');
 // Variabile agganciata al button
 let btnGridGen = document.getElementById('btnGridGen');
-// Scelgo 10 numeri random e stabilisco le celle con pepe the frog
+// Scelgo 10 numeri random e stabilisco le celle che avranno pepe the frog
 let randomNums = Array.from({length: 10}, () => Math.floor(Math.random() * 100));
 let randomCellNums = [];
 for (let i= 0; i < randomNums.length; i++) {
@@ -24,7 +24,7 @@ btnGridGen.addEventListener('click', function(){
     // Aggiungo celle a 'gridCont'
     for (let i = 1; i <= 100; i++) {
 
-        // creazione singola cella
+        // creazione singola cella con le relative classi
         let gridCell = document.createElement('div');
         gridCell.classList.add('gridCell');
         gridCell.classList.add(('cellNum' + i));
@@ -35,20 +35,19 @@ btnGridGen.addEventListener('click', function(){
         //Aggiungo azione al click sulla cella
         gridCell.addEventListener('click', function() {
 
-            //console.log(gridCell.classList[1]);
-
             if (randomCellNums.includes(gridCell.classList[1])) {
 
+                // Rimuovo numero da cella e mostro pepe th frog
                 gridCell.removeChild(gridCell.firstChild);
                 let newHTML = `<img src="./img/pepe-the-frog.webp" alt="">`;
                 gridCell.insertAdjacentHTML('beforeend',newHTML);
-    
+                // Stampo scritta 'hai perso
                 let youLooseDiv = `<div class="youloose">HAI PERSO</div>`;
                 gridContainer.insertAdjacentHTML('beforeend',youLooseDiv);
-                //gridCell.classList.add(('cellNum' + i));
 
             } else {
 
+                // Cambio colore sfondo a cella
                 gridCell.classList.add('gridCellClick');
                 console.log('Hai cliccato sulla cella ' + gridCell.innerHTML);
 
