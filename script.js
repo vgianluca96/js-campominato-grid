@@ -2,16 +2,23 @@
 
 // Variabile agganciata al grid container
 let gridContainer = document.getElementById('gridCont');
+let btnGridGen = document.getElementById('btnGridGen');
 
 
-for (let i = 1; i <= 100; i++) {
+btnGridGen.addEventListener('click', function(){
     
-    // creazione singola cella
-    let gridCell = document.createElement('div');
-    gridCell.classList.add('gridCell');
-    // Aggiungo la cella al grid container
-    gridContainer.append(gridCell);
+    for (let i = 1; i <= 100; i++) {
+        
+        // creazione singola cella
+        let gridCell = document.createElement('div');
+        gridCell.classList.add('gridCell');
+        gridCell.innerHTML = i;
+        // Aggiungo la cella al grid container
+        gridContainer.append(gridCell);
+    
+    }
 
-}
+})
+
 
 
